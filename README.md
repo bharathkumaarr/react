@@ -1,1 +1,1 @@
-this is a repo just to keep pushing my new learnings in reactJs
+this is a repo just to keep pushing my new learnings in reactJs. 
