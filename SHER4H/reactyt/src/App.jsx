@@ -1,26 +1,30 @@
-import React from 'react'
-const a = 20
+import React from 'react';
+import { useState } from 'react';
+
 const App = () => {
-  let user = 'Bharath Kumar'
-  
-  const text = () => {
-    console.log('text when clicked');
-  }
-   
-  const changeUser = () => {
-    console.log(user);
-     
-    user='new user bharath 2';
-    console.log(user);
-  }
+  const [username, setUsername] = useState('')
+
   return (
     <div>
-      <h1>Username is {user}</h1>
-      <button onClick={changeUser}>Change User</button>
-
-  
+      <form >
+        <input 
+        value={username}
+          onChange={(e)=>{
+          setUsername(e.target.value)
+          }}
+          type="text" 
+          placeholder="Enter name" 
+          className="bg-slate-600 text-8xl px-4 py-3 rounded-3xl font-semibold" 
+        />
+        <button 
+          type="submit" 
+          className="px-4 py-3 bg-slate-500 rounded-3xl text-8xl m-5"
+        >
+          submit
+        </button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
